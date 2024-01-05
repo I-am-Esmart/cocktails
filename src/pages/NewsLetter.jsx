@@ -1,4 +1,4 @@
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, useNavigation } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -8,12 +8,21 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
 
-  const response = await axios.post(newsletterUrl, data);
-  console.log(response);
-  return null;
+  try {
+    const response = await axios.post(newsletterUrl, data);
+    toast.success(response.data.msg);
+    return redirect("/");
+  } catch (error) {
+    console.log(error);
+    toast.error(error?.response?.data?.msg);
+    return null;
+  }
 };
 
 const NewsLetter = () => {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
+
   return (
     <Form className="form" method="POST">
       <h4 style={{ textAlign: "center", marginBottom: "2rem" }}></h4>
@@ -28,7 +37,6 @@ const NewsLetter = () => {
           name="name"
           id="name"
           required
-          defaultValue="Emma"
         />
       </div>
       {/* lastName */}
@@ -42,7 +50,6 @@ const NewsLetter = () => {
           name="lastName"
           id="lastName"
           required
-          defaultValue="Joseph"
         />
       </div>
       {/* email */}
@@ -56,15 +63,16 @@ const NewsLetter = () => {
           name="email"
           id="email"
           required
-          defaultValue="emma@test.com"
+          defaultValue="test@test.com"
         />
       </div>
       <button
         type="submit"
         className="btn btn-block"
         style={{ marginTop: "0.5rem" }}
+        disabled={isSubmitting}
       >
-        Submit
+        {isSubmitting ? "loading..." : "submit"}
       </button>
     </Form>
   );

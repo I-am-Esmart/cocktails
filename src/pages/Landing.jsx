@@ -2,6 +2,7 @@ import axios from "axios";
 import Wrapper from "../assets/wrappers/CocktailList";
 import { useLoaderData } from "react-router-dom";
 import CocktailList from "../components/CocktailList";
+import SearchForm from "../components/SearchForm";
 import { Outlet } from "react-router-dom";
 
 const cocktailSearchUrl =
@@ -23,6 +24,7 @@ const Landing = () => {
   console.log(drinks);
   return (
     <div>
+      <SearchForm />
       <CocktailList drinks={drinks} />
     </div>
   );
