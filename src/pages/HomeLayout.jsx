@@ -9,11 +9,9 @@ const HomeLayout = () => {
     <>
       <div>
         <Navbar />
-        <h2>website in progress...!</h2>
         <section className="page">
           {isPageLoading ? <div className="loading"></div> : <Outlet />}
         </section>
-        <footer>footer</footer>
       </div>
     </>
   );

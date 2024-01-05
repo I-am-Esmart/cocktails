@@ -1,11 +1,11 @@
 import { Form, redirect, useNavigation } from "react-router-dom";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { toast } from "react-toastify";
 
 const newsletterUrl = "https://www.course-api.com/cocktails-newsletter";
 
-export const action = async ({ request }) => {
-  const formData = await request.formData();
+export const action = async (result) => {
+  const formData = await result.request.formData();
   const data = Object.fromEntries(formData);
 
   try {
@@ -13,9 +13,8 @@ export const action = async ({ request }) => {
     toast.success(response.data.msg);
     return redirect("/");
   } catch (error) {
-    console.log(error);
-    toast.error(error?.response?.data?.msg);
-    return null;
+    toast.error(error?.response?.data?.msg || error.message);
+    return error;
   }
 };
 

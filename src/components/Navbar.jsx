@@ -1,7 +1,7 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
-import styled from "styled-components"
-import Wrapper from "../assets/wrappers/Navbar"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import Wrapper from "../assets/wrappers/Navbar";
 
 const Navbar = () => {
   return (
@@ -15,13 +15,16 @@ const Navbar = () => {
           <NavLink to="/about" className="nav-link">
             About
           </NavLink>
-          <NavLink to="/newsletter" className="nav-link">
-            Newsletter
+          <NavLink
+            to="https://wa.me/message/IKAZNGRM4G2ML1"
+            className="nav-link"
+          >
+            Contact
           </NavLink>
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
