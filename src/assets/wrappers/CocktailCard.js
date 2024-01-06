@@ -1,6 +1,5 @@
 import styled from "styled-components";
 const Wrapper = styled.article`
-  border: 1px solid red;
   width: 30%;
   margin: 1rem;
 
