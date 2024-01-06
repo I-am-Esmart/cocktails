@@ -1,21 +1,35 @@
-import styled from "styled-components"
+import styled from "styled-components";
 const Wrapper = styled.article`
+  border: 1px solid red;
+  width: 30%;
+  margin: 1rem;
+
   background: var(--white);
   box-shadow: var(--shadow-2);
   transition: var(--transition);
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-wrap: wrap;
   border-radius: var(--borderRadius);
   :hover {
     box-shadow: var(--shadow-4);
   }
+
+  @media screen and (max-width: 1140px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 786px) {
+    width: 80%;
+  }
+
   img {
-    height: 15rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
     border-top-left-radius: var(--borderRadius);
     border-top-right-radius: var(--borderRadius);
   }
   .footer {
-    padding: 1.5rem;
+    padding: 1.2rem;
     h4,
     h5 {
       margin-bottom: 0.5rem;
@@ -28,6 +42,6 @@ const Wrapper = styled.article`
       color: var(--grey-500);
     }
   }
-`
+`;
 
-export default Wrapper
+export default Wrapper;
