@@ -13,6 +13,7 @@ const SearchForm = ({ searchTerm }) => {
           className="form-input"
           name="search"
           defaultValue={searchTerm}
+          placeholder="search..."
         />
         <button type="submit" className="btn" disabled={isSubmitting}>
           {isSubmitting ? "searching..." : "search"}

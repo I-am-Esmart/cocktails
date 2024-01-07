@@ -8,11 +8,11 @@ const About = () => {
         Welcome to cocktails hub – where the art of mixology meets the digital
         age! 🍹✨
         <p>
-          At [Your Website Name], we believe that every cocktail is a
-          masterpiece waiting to be crafted, and we're here to guide you on a
-          journey through the delightful world of mixology. Whether you're a
-          seasoned bartender or a curious home enthusiast, our website is your
-          go-to destination for discovering and mastering the art of cocktail
+          At cocktails hub, we believe that every cocktail is a masterpiece
+          waiting to be crafted, and we're here to guide you on a journey
+          through the delightful world of mixology. Whether you're a seasoned
+          bartender or a curious home enthusiast, our website is your go-to
+          destination for discovering and mastering the art of cocktail
           creation.
         </p>
         <p>
@@ -51,14 +51,14 @@ const About = () => {
         </p>
         <p>
           <span>👩‍🍳 **Crafting Memories, One Sip at a Time:**</span> Beyond the
-          ingredients and instructions, [Your Website Name] is about the joy of
+          ingredients and instructions, cocktails hub is about the joy of
           creating memories. We invite you to savor the moments spent
           experimenting with new flavors, laughing with friends over a
           well-shaken martini, and toasting to life's extraordinary moments.
           Join us on this liquid journey of discovery, where each page is a
           passport to a new and exciting flavor destination. Cheers to the art
           of crafting cocktails, and here's to the countless memories waiting to
-          be stirred, shaken, and savored! Cheers, The [Your Website Name] Team
+          be stirred, shaken, and savored! Cheers, The cocktails hub Team
         </p>
       </p>
     </Wrapper>
