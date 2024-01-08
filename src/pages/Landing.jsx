@@ -32,10 +32,12 @@ const Landing = () => {
   const { searchTerm } = useLoaderData();
   const { data: drinks } = useQuery(searchCocktailQuery(searchTerm));
   return (
-    <div>
-      <SearchForm searchTerm={searchTerm} />
-      <CocktailList drinks={drinks} />
-    </div>
+    <Wrapper>
+      <main className="landing-page">
+        <SearchForm searchTerm={searchTerm} />
+        <CocktailList drinks={drinks} />
+      </main>
+    </Wrapper>
   );
 };
 

@@ -203,7 +203,6 @@ ul {
 /* form */
 
 .form {
-  width: 100%;
   max-width: var(--fixed-width);
   background: var(--white);
   border-radius: var(--borderRadius);
@@ -291,7 +290,7 @@ PROJECT CSS
   width: var(--view-width);
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 5rem 2rem;
+  width: 90%;
 }
 
 span {
