@@ -23,7 +23,7 @@ export const loader =
   (QueryClient) =>
   async ({ request }) => {
     const url = new URL(request.url);
-    const searchTerm = url.searchParams.get("search") || "";
+    const searchTerm = url.searchParams.get("search") || "margarita";
     await QueryClient.ensureQueryData(searchCocktailQuery(searchTerm));
     return { searchTerm };
   };
